@@ -26,9 +26,11 @@ void subsetSum(int i, int sum, int k)
 
     // Include element
     subset[k] = set[i];
+    printf("Including %d\n", subset[k]);
     subsetSum(i + 1, sum + set[i], k + 1);
 
     // Exclude element
+    printf("Excluding %d\n", set[i]);
     subsetSum(i + 1, sum, k);
 }
 
